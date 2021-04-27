@@ -17,7 +17,7 @@ PlotPlant.destroy_all
 @plot2 = @community.plots.create(number: 3, size: "small", direction: "East")
 
 @catnip = Plant.create(name: "Catnip", description: "Good for cats", days_to_harvest: 20)
-@potato = Plant.create(name: "Plant", description: "Boil Em, Mash Em...", days_to_harvest: 10)
+@potato = Plant.create(name: "Potato", description: "Boil Em, Mash Em...", days_to_harvest: 10)
 @brussel = Plant.create(name: "Brussel Sprouts", description: "Tasty when roasted", days_to_harvest: 100)
 @corn = Plant.create(name: "Corn", description: "Tall Stalks", days_to_harvest: 101)
 @watermelon = Plant.create(name: "Watermelon", description: "Great to cool down", days_to_harvest: 38)
