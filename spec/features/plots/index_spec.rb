@@ -26,23 +26,22 @@ RSpec.describe 'Plots  Index Page' do
 
   it "I see a list of all plot numbers" do
     expect(page).to have_content("Plots")
-    expect(page).to have_content(@plot1.id)
-    expect(page).to have_content(@plot2.id)
-  end
 
-  it "I see the names of all that plot's plants" do
-    within "plot-#{@plot1.id}" do
+    within "#plot-#{@plot1.id}" do
+    expect(page).to have_content(@plot1.number)
+
     expect(page).to have_content(@catnip.name)
     expect(page).to have_content(@potato.name)
     expect(page).to have_content(@brussel.name)
+    end
 
-    expect(page).to_not have_content(@corn.name)
+    within "#plot-#{@plot2.id}" do
+    expect(page).to have_content(@plot2.number)
 
-      within "plot-#{@plot2.id}" do
-        expect(page).to have_content(@corn.name)
-        expect(page).to have_content(@watermlon.name)
-        expect(page).to have_content(@zucchini.name)
-      end
+    expect(page).to have_content(@corn.name)
+  
+    expect(page).to have_content(@watermelon.name)
+    expect(page).to have_content(@zucchini.name)
     end
   end
 end
