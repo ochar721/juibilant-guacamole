@@ -36,7 +36,7 @@ RSpec.describe Garden do
     describe "::plant_names" do
       it "list all the plants in the garden, where the names are unique and only includes plants that take less than 100 days to harvest" do
         expect(@community.quick_plants.to_a).to eq([@catnip, @potato, @watermelon, @zucchini])
-        expect(@community.quick_plants.to_a).to_no eq([@corn, @brussel, @watermelon1])
+        expect(@community.quick_plants.to_a).to_not eq([@corn, @brussel, @watermelon1])
       end
     end
   end
