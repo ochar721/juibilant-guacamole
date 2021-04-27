@@ -1,2 +1,6 @@
 <h1><%=@garden.name%></h1>
 <h3><%=@garden.organic%></h3>
+
+  <%@garden.quick_plants.each do |plant|%>
+      <%=plant.name%>
+  <%end%>
