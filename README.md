@@ -80,6 +80,7 @@ And I no longer see that plant listed under that plot
 User Story 3, Garden's Plants
 As a visitor
 When I visit an garden's show page
+Then I see the garden's 'name' and 'organic' attributes,
 Then I see a list of plants that are included in that garden's plots
 And I see that this list is unique (no duplicate plants)
 And I see that this list only includes plants that take less than 100 days to harvest
@@ -90,7 +91,6 @@ And I see that this list only includes plants that take less than 100 days to ha
 ```
 Extension,
 As a visitor
-When I visit a garden's show page,
 Then I see the list of plants is sorted by the number of plants that appear in any of that garden's plots from most to least
 (Note: you should only make 1 database query to retrieve the sorted list of plants)
 ```
